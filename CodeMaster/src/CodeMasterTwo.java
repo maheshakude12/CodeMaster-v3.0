@@ -42,7 +42,7 @@ public class CodeMasterTwo {
 							  outputStream.write(':'); outputStream.write(Integer.parseInt(Number));
 							  outputStream.write('\n');
 							 
-					        
+					       
 					        isLucky = true;
 					    
 						   }
