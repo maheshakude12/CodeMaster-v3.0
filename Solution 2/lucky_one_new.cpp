@@ -43,7 +43,7 @@ int main()
         }
         reverse(d.begin(), d.end());
         testLucky();
-        int zero=8;
+        int zero=20;
         while(zero--)
         if (find(d.begin(), d.end(), 0) != d.end())
         {
