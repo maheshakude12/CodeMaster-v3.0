@@ -1,0 +1,66 @@
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class LuckyNumber
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner in = new Scanner(System.in);
+		int req = in.nextInt();
+		 in.nextLine();
+		for (int i =1;i<=req ;i++ )
+		{
+		    int lastNumber = in.nextInt();
+		    int k = req;
+
+		    while(k!=0)
+		    {
+		        int n=lastNumber;
+		        int count =0;
+		        while(n!=0)
+		        {
+		            n /= 10;
+		            ++count;
+		        }
+		        
+		        if(count==1)
+		        {
+		            k--;
+		            System.out.println("Request-"+i+":"+lastNumber);
+		            break;
+		        }
+		        else{
+		        int prevNum = lastNumber-1; 
+		        lastNumber = prevNum; 
+		        String s = String.valueOf(prevNum);
+
+		        for (int j=0;j<s.length()-1;j++)
+		        {
+		           
+		            if(s.charAt(j)<s.charAt(j+1))
+		            {
+                        k--;
+		                System.out.println("Request-"+i+":"+lastNumber);
+		                
+		            }
+		            else if(s.charAt(j)==s.charAt(j+1))
+		            {
+		                k--;
+		                System.out.println("Request-"+i+":"+lastNumber);
+		                
+		            }
+		           
+		            else{
+		                break;
+		            }
+
+		        }
+
+		        }
+		    }
+		}
+	}
+}
