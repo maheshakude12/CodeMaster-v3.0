@@ -34,7 +34,7 @@ namespace CodeMasterSolution
                 luckyNumber = GetLuckyNumber(item.number);
                 using (StreamWriter sw = new StreamWriter(assemblyFilePath.Substring(0, integraleMainStart) + "Output.txt", true))
                 {
-                    sw.WriteLine("Request-{0}: {1}", count, luckyNumber);
+                    sw.WriteLine("Request- {0}: {1}", count, luckyNumber);
                     sw.Close();
                 }
                 count++;
