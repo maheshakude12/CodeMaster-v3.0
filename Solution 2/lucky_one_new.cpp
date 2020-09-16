@@ -26,7 +26,7 @@ int main()
     int input;
     unsigned long long int num, finNum;
     cin>>input;
-    vector<int> myVec;
+    vector<unsigned long long int> myVec;
     while(input--)
     {
         cin>>num;
@@ -43,7 +43,7 @@ int main()
         }
         reverse(d.begin(), d.end());
         testLucky();
-        int zero=18;
+        int zero=8;
         while(zero--)
         if (find(d.begin(), d.end(), 0) != d.end())
         {
