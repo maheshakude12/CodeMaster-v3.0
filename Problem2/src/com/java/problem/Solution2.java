@@ -1,36 +1,60 @@
 package com.java.problem;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.Scanner;
 
-public class Solution2 {
+public class Solution2 {	
+	
 
-	public static void main(String[] args) {
-		
-		String str = "12312";
-		long number = Long.valueOf(str);
+	public static void main(String[] args) throws IOException {
 		
 		
-		boolean isLuckyFlag = checkLuckyNO(number);
-		
-		
-		
-		if(!isLuckyFlag) {
-			//print in direct output file
-			System.out.println(number); 
-		} else {
-			for(int i=1 ; i<number ; i++) {
-				number= number-i;
-				if(checkLuckyNO(number)) {
-					//print in to file
-					System.out.println(number); 
-					break;
+		Scanner scanner = new Scanner(new File("Problem2_input.txt"));
+		FileWriter fw = new FileWriter("Problem2_ouput.txt");   
+		File fout = new File("Problem2_ouput.txt");
+		FileOutputStream fos = new FileOutputStream(fout);
+	 
+		//BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+		OutputStreamWriter osw = new OutputStreamWriter(fos);
+		while (scanner.hasNextLine()) {			
+			
+			long number = Long.valueOf(scanner.nextLine());
+			
+			boolean isLuckyFlag = checkLuckyNO(number);			
+			
+			
+			if(!isLuckyFlag) {
+				//print in the output file
+				
+				//bw.write(String.valueOf(number));
+				//bw.newLine();
+				
+			} else {
+				
+				for(int i=1 ; i<number ; i++) {
+					number= number-i;
+					if(!checkLuckyNO(number)) {
+						//print in to file
+						System.out.println(number); 
+						osw.write(String.valueOf(number));
+						//bw.newLine();
+						break;
+					}
 				}
 			}
 		}
+		scanner.close();
+		osw.close();
 		
 
 	}
@@ -46,40 +70,29 @@ public class Solution2 {
 			
 		boolean isNotLuckyNo = false;
 		Collections.reverse(stack);
-		for(int i = stack.size(); i<stack.size();i++) {
-			int temp1 = stack.get(i);
-			int temp2 = stack.get(i++);
-			if(temp1 <= temp2) {
-				//isLuckyNo = true;
-			} else {
-				isNotLuckyNo = true;
-				break;
-			}
+		
+		Integer[] array = new Integer[stack.size()];
+		stack.toArray(array);
+		boolean flag = isSorted(array);
+		if(flag) {			
+			isNotLuckyNo = false;
+		}else {
+			isNotLuckyNo = true;
 		}
-		/*while (!stack.isEmpty()) {
-		  
-		    //System.out.println(stack.pop());
-		    int temp1 = stack.pop();
-		    int temp2 = 0;
-		    try {
-		    	temp2 = stack.pop();
-		    } catch(NoSuchElementException e) {
-		    	
-		    }
-		    if(temp1 <= temp2) {
-		    	System.out.println("This is Lucky number");
-		    	isLuckyNo = true;
-		    	//break;
-		    } else {
-		    	System.out.println("This is not Lucky number");
-		    	isLuckyNo = false;
-		    	break;
-		    }
-		}*/
-		
-		
+			
 		
 		return isNotLuckyNo;
 	}
+	
+	public static boolean isSorted(Integer[] array) { 
+		int prev = array[0]; 
+		for (int i = 1; i < array.length; i++) { 
+			if (array[i] > prev) { 
+				return false; 
+	        } 
+			prev = array[i]; 
+		} 
+	    return true; 
+	} 
 
 }
