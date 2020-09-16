@@ -28,7 +28,7 @@ public class FraudStar {
 			List<String> inputDataLine = new ArrayList<String>();		// Storage for Input Line to be written in output file
 
 			while ((line = bufferedReader.readLine()) != null) {
-			    System.out.println(line);			// Output Per Line Data
+				System.out.println(line);			// Output Per Line Data
 
 				if(i == 0){
 					noOfRecords = Long.valueOf(line);
@@ -78,28 +78,46 @@ public class FraudStar {
 
 
 	/***return New Lucky Number***/
-	public static String processor(long value){
+	
+	public static String processor(long number){
 
-		long newLuckyNumber = value ;
-		/// Logic Here
-		
-		while(value > 0) {
-			long digit1 =  value%10;
-			
-			 value = value/10;
-		
-			 long digit2 = value%10;
-		
-			if(digit1 > digit2) {
-				continue;
-			} else {
-				newLuckyNumber = value ;
+		long tmpnumber = number;
+		while (number > 0) {
+
+			boolean flag = isLuckyNumber(number);
+			if(flag) {
+				//System.out.println("Lucky Number is "+number);
+				tmpnumber = number;
 				break;
 			}
-		} 
+			number = number - 1;
 
-		return ""+newLuckyNumber;
+		}
+		return ""+tmpnumber;
 	}
+
+	public static boolean isLuckyNumber(long value) {
+		boolean flg = true;
+		while(value > 0) {
+			long digit1 =  value%10;
+
+			value = value/10;
+
+			long digit2 = value%10;
+
+			if(digit1 > digit2 ||  digit1 == digit2) {
+				continue;
+			} else {
+				flg = false;
+				break;
+			}
+		}
+
+		return flg;
+
+	}
+
+
 
 
 }
