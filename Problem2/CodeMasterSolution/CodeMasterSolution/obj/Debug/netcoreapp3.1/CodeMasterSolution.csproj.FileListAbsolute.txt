@@ -1,0 +1,13 @@
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\bin\Debug\netcoreapp3.1\CodeMasterSolution.exe
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\bin\Debug\netcoreapp3.1\CodeMasterSolution.deps.json
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\bin\Debug\netcoreapp3.1\CodeMasterSolution.runtimeconfig.json
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\bin\Debug\netcoreapp3.1\CodeMasterSolution.runtimeconfig.dev.json
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\bin\Debug\netcoreapp3.1\CodeMasterSolution.dll
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\bin\Debug\netcoreapp3.1\CodeMasterSolution.pdb
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\obj\Debug\netcoreapp3.1\CodeMasterSolution.csprojAssemblyReference.cache
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\obj\Debug\netcoreapp3.1\CodeMasterSolution.AssemblyInfoInputs.cache
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\obj\Debug\netcoreapp3.1\CodeMasterSolution.AssemblyInfo.cs
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\obj\Debug\netcoreapp3.1\CodeMasterSolution.csproj.CoreCompileInputs.cache
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\obj\Debug\netcoreapp3.1\CodeMasterSolution.dll
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\obj\Debug\netcoreapp3.1\CodeMasterSolution.pdb
+C:\CodeMaster-v3.0\CodeMaster-v3.0\Problem2\CodeMasterSolution\CodeMasterSolution\obj\Debug\netcoreapp3.1\CodeMasterSolution.genruntimeconfig.cache
