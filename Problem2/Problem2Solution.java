@@ -21,8 +21,10 @@ public class Problem2Solution {
                 line = reader.readLine();
                 //System.out.println(line + " ----ii"+ii);
                 //output= Long.valueOf(line);
+               // outputList.add("Request-"+ii+": "+ (line));
+
                 outputList.add("Request-"+ii+": "+ generateLuckyNo(line));
-                System.out.println("Request-"+ii+": "+ generateLuckyNo(line));
+                //System.out.println("Request-"+ii+": "+ generateLuckyNo(line));
             }
 
 
@@ -91,6 +93,7 @@ public class Problem2Solution {
                     System.out.println(checkLuckyformat(newLucky));
                     return Long.valueOf(newLucky);
                 } else {
+                   // newLucky =
                     newLucky = newLucky-1;
                     //   System.out.println("newLucky"+newLucky);
                 }
